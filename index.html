@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT Sensor Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 IoT Sensor Dashboard</h1>
+    <p class="subtitle">Live Sensor Data Monitoring</p>
+
+    <!-- Sensor Cards -->
+    <div class="cards">
+      <div class="card" id="gasCard">
+        <h2>MQ2 Gas</h2>
+        <p class="value" id="gasValue">50 ppm</p>
+        <p class="status" id="gasStatus">✅ Safe</p>
+      </div>
+      <div class="card" id="tempCard">
+        <h2>Temperature</h2>
+        <p class="value" id="tempValue">24.5 °C</p>
+        <p class="status" id="tempStatus">❄️ Normal</p>
+      </div>
+      <div class="card" id="humidityCard">
+        <h2>Humidity</h2>
+        <p class="value" id="humidityValue">55 %</p>
+        <p class="status" id="humidityStatus">🌫 Normal</p>
+      </div>
+      <div class="card" id="distanceCard">
+        <h2>Ultrasonic Distance</h2>
+        <p class="value" id="distanceValue">50 cm</p>
+        <p class="status" id="distanceStatus">📏 Normal</p>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-container">
+      <canvas id="sensorChart"></canvas>
+    </div>
+
+    <!-- Logs Table -->
+    <div class="logs">
+      <h2>📋 Recent Sensor Logs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Gas (ppm)</th>
+            <th>Temp (°C)</th>
+            <th>Humidity (%)</th>
+            <th>Distance (cm)</th>
+          </tr>
+        </thead>
+        <tbody id="logTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
